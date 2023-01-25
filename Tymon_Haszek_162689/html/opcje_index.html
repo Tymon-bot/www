@@ -1,0 +1,43 @@
+
+            <td>
+                <div class="content">
+                    <h2 style="text-align: center">Zmiana koloru strony</h2>
+                    <div style="float: left"><button class="button" onclick="changeBackground('#FCFF33')"><span>Zółty</span></button></div>
+                    <div style="float: left"><button class="button" onclick="changeBackground('#FF3F33')"><span>Czerwony</span></button></div>
+                    <div style="float: left"><button class="button" onclick="changeBackground('#335BFF')"><span>Niebieski</span></button></div>
+                    <div style="float: left"><button class="button" onclick="changeBackground('#A833FF')"><span>Fioletowy</span></button></div>
+                    <div style="float: left"><button class="button" onclick="changeBackground('#33FF3F')"><span>Zielony</span></button></div>
+                    <div style="float: left"><button class="button" onclick="changeBackground('#112233')"><span>Domyślny</span></button></div>
+                </div>
+                <div style="clear: both">
+                    <h2 style="text-align: center">jQueryTest</h2>
+                    <div id="animacjaTestowa1" class="test-block">Kliknij, a się powiększe</div>
+                        <script>
+                            $("#animacjaTestowa1").on("click", function(){
+                                $(this).animate({
+                                     width: "500px",
+                                    opacity: 0.4,
+                                    fontSize: "3em",
+                                    borderWidth: "10px"
+                                    }, 1500);
+                            });
+                        </script>
+
+                    <div id="animacjaTestowa2" class="test-block"><span>Najedź, a się powiększe</span></div>
+                        <script>
+                            $("#animacjaTestowa2").on({
+                                "mouseover" : function() {
+                                    $(this).animate({
+                                        width:300,
+                                    }, 800);
+                                },
+                                "mouseout" : function() {
+                                    $(this).animate({
+                                         width: 200
+                                    }, 800);
+                                }
+                            });
+                        </script>
+            </td>
+
+
